@@ -78,35 +78,20 @@ function onMouseDrag(event) {
 }
 
 function onMouseUp(event) {
-	var x1 = Math.random();
-	x1 = x1*100; 
-	x1 = x1.toFixed(0);
-	var x2 = Math.random();
-	x2 = x2*100; 
-	x2 = x2.toFixed(0);
-	var x3 = Math.random();
-	x3 = x3*100; 
-	x3 = x3.toFixed(0);
-	var y1 = Math.random();
-	y1 = y1*100; 
-	y1 = y1.toFixed(0);
-	var y2 = Math.random();
-	y2 = y2*100; 
-	 y2 = y2.toFixed(0);
-	var y3 = Math.random();
-	y3 = y3*100; 
-	y3 = y3.toFixed(0);
-	var ball = new Ball((x1,y1), lastDelta);
-	var ball2 = new Ball((x2,y2), lastDelta);
-	var ball3 = new Ball((x3,y3), lastDelta);
-	var ball4 = new Ball(event.point, lastDelta);
+	var x1 = (Point.random() * view.size);
+	var x2 = (Point.random() * view.size);
+	var x3 = (Point.random() * view.size);
+	var ball = new Ball(x1, lastDelta);
 	balls.push(ball);
+	lastDelta = null;
+	var ball2 = new Ball(x2, lastDelta);
 	balls.push(ball2);
+	lastDelta = null;
+	var ball3 = new Ball(x3, lastDelta);
 	balls.push(ball3);
+	lastDelta = null;
+	var ball4 = new Ball(event.point, lastDelta);
 	balls.push(ball4);
-	lastDelta = null;
-	lastDelta = null;
-	lastDelta = null;
 	lastDelta = null;
 }
 

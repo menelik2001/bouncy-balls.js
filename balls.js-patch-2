@@ -78,8 +78,17 @@ function onMouseDrag(event) {
 }
 
 function onMouseUp(event) {
-	var ball = new Ball(event.point, lastDelta);
+	var ball = new Ball((32,23), lastDelta);
+	var ball2 = new Ball((42,6), lastDelta);
+	var ball3 = new Ball((62,72), lastDelta);
+	var ball4 = new Ball(event.point, lastDelta);
 	balls.push(ball);
+	balls.push(ball2);
+	balls.push(ball3);
+	balls.push(ball4);
+	lastDelta = null;
+	lastDelta = null;
+	lastDelta = null;
 	lastDelta = null;
 }
 
